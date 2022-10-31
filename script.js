@@ -58,7 +58,9 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
-  return false;
+  else {
+    return false;
+  }
 };
 
 // FINISHED TYPING
@@ -67,10 +69,13 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
+  // const finishTimeInt = parseInt(finishTime);
   const timeTaken = (finishTime - startTime) / 1000;
+  const timeTakenInt = parseInt(timeTaken);
+
 
   // show result modal
-  resultModal.innerHTML = "";
+  // resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
   modalBackground.classList.toggle("hidden");
   // clear user text
@@ -85,7 +90,7 @@ const gameOver = () => {
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTakenInt, errorCount);
 
   // restart everything
   startTime = null;
