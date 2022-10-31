@@ -71,7 +71,7 @@ const gameOver = () => {
   const timeTakenInt = parseInt(timeTaken);
 
   // show result modal
-  // resultModal.innerHTML = "";
+  resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
   modalBackground.classList.toggle("hidden");
   // clear user text
