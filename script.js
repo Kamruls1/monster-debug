@@ -58,9 +58,9 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
-  else {
-    return false;
-  }
+
+  return false;
+
 };
 
 // FINISHED TYPING
@@ -72,7 +72,6 @@ const gameOver = () => {
   // const finishTimeInt = parseInt(finishTime);
   const timeTaken = (finishTime - startTime) / 1000;
   const timeTakenInt = parseInt(timeTaken);
-
 
   // show result modal
   // resultModal.innerHTML = "";
