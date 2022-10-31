@@ -10,7 +10,6 @@ let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
-
 // Load and display question
 fetch("./texts.json")
   .then((res) => res.json())
@@ -41,13 +40,11 @@ const typeController = (e) => {
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
-
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
-
   // check if given question text is equal to user typed text
   if (questionText === userText) {
     gameOver();
